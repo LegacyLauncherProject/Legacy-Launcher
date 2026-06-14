@@ -40,11 +40,15 @@ jobs:
           name: ZalithLauncher(Debug) ${{ matrix.arch }}
           path: ZalithLauncher/build/outputs/apk/debug/*
 
+  NotifyDiscord:
+    needs: BuildDebug
+    if: always()
+    runs-on: ubuntu-22.04
+    steps:
       - name: Send Discord notification
-        if: always()
         uses: sarisia/actions-status-discord@v1
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
-          status: ${{ job.status }}
-          title: "Build Status"
+          status: ${{ needs.BuildDebug.result }}
+          title: "Build Complete"
           description: "Android CI Build - ${{ github.ref_name }}"
