@@ -47,13 +47,13 @@ jobs:
     steps:
       - name: Send Discord notification
         run: |
-          curl -X POST ${{ secrets.DISCORD_WEBHOOK }} \
+          curl -X POST '${{ secrets.DISCORD_WEBHOOK }}' \
           -H 'Content-Type: application/json' \
           -d '{
             "content": "Build Status: ${{ needs.BuildDebug.result }}",
             "embeds": [{
-              "title": "Legacy Launcher Build",
-                        "description": "Branch: ${{ github.ref_name }}",
+              "title": "Legacy Launcher Commit",
+              "description": "Branch: ${{ github.ref_name }}\nCommit: ${{ github.event.head_commit.message }}",
               "color": 16711680
             }]
           }'
