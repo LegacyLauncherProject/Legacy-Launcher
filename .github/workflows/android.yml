@@ -53,3 +53,7 @@ jobs:
             "content": "Build Status: ${{ needs.BuildDebug.result }}",
             "embeds": [{
               "title": "Legacy Launcher Build",
+                        "description": "Branch: ${{ github.ref_name }}",
+              "color": 16711680
+            }]
+          }'
