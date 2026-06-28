@@ -1,314 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_app"
-    tools:ignore="ContentDescription">
+<resources>
+    <color name="black_or_white">#FFFFFF</color>
 
-    <!-- BACKGROUND IMAGE -->
-    <ImageView
-        android:id="@+id/background_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+    <color name="background_app">#0A1929</color>
+    <color name="background_app_error">#3D1515</color>
+    <color name="background_overlay">#1A2332</color>
+    <color name="background_status_bar">#050F1A</color>
+    <color name="background_menu_top">#0F2A3F</color>
+    <color name="background_menu_top_error">#4A1A1A</color>
+    <color name="background_menu_element">#1A3F52</color>
+    <color name="background_ripple_effect">#2A4A5A</color>
 
-    <!-- TOP BAR -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_56sdp"
-        android:background="@color/background_menu_top"
-        app:layout_constraintTop_toTopOf="parent">
+    <color name="button_background">#1A3F52</color>
+    <color name="button_background_selected">#2A5A7A</color>
+    <color name="dialog_background">#0F1F2F</color>
 
-        <com.movtery.zalithlauncher.ui.view.AnimTextView
-            android:id="@+id/app_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_16sdp"
-            android:textColor="@color/menu_bar_text"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <color name="menu_bar">#0A1F2F</color>
+    <color name="menu_bar_text">#E8F4F9</color>
+    <color name="menu_overlay">#BE1A3F52</color>
+    <color name="menu_progress">#00D4FF</color>
 
-        <ImageButton
-            android:id="@+id/download_button"
-            android:layout_width="@dimen/_44sdp"
-            android:layout_height="@dimen/_44sdp"
-            android:layout_marginEnd="@dimen/_6sdp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_download"
-            android:tint="@color/menu_bar_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/setting_button"
-            app:layout_constraintTop_toTopOf="parent" />
+    <color name="background_item">#CC0F2A3F</color>
+    <color name="background_item_selected">#1A3F5A</color>
+    <color name="background_item_disabled">#2A1515</color>
+    <color name="background_sponsor_intermediate">#CC1A4A6A</color>
+    <color name="background_sponsor_advanced">#CC2A5A8A</color>
 
-        <ImageButton
-            android:id="@+id/setting_button"
-            android:layout_width="@dimen/_44sdp"
-            android:layout_height="@dimen/_44sdp"
-            android:layout_marginEnd="@dimen/_6sdp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_menu_settings"
-            android:tint="@color/menu_bar_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <color name="edit_box_fill">#1A3F52</color>
+    <color name="edit_box_fill_selected">#2A5A7A</color>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <color name="mod_category_fill">#80153F52</color>
+    <color name="text_background_fill">#B32A4A5A</color>
 
-    <!-- DIVIDER -->
-    <View
-        android:id="@+id/shadowView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1sdp"
-        android:background="@color/background_menu_element"
-        app:layout_constraintTop_toBottomOf="@id/top_layout" />
+    <color name="settings_category">#00B8D4</color>
 
-    <!-- MAIN CONTENT AREA -->
-    <ScrollView
-        android:id="@+id/main_content_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scrollbars="none"
-        android:overScrollMode="never"
-        app:layout_constraintTop_toBottomOf="@id/shadowView"
-        app:layout_constraintBottom_toTopOf="@id/progress_layout">
+    <color name="favorite_color">#FF5A5A</color>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <color name="icon_color">#E8F4F9</color>
 
-            <!-- HERO CARD - Welcome Section -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/hero_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_16sdp"
-                app:cardBackgroundColor="@color/background_menu_element"
-                app:cardCornerRadius="@dimen/_12sdp"
-                app:cardElevation="@dimen/_4sdp">
+    <color name="primary_text">#E8F4F9</color>
+</resources>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/_20sdp">
-
-                    <TextView
-                        android:id="@+id/hero_title"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Welcome back!"
-                        android:textSize="@dimen/_28ssp"
-                        android:textStyle="bold"
-                        android:textColor="@color/menu_bar_text"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/hero_subtitle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Ready to launch?"
-                        android:textSize="@dimen/_14sdp"
-                        android:textColor="@color/menu_progress"
-                        android:layout_marginTop="@dimen/_6sdp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/hero_title" />
-
-                    <com.movtery.zalithlauncher.ui.view.AnimButton
-                        android:id="@+id/play_button"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_52sdp"
-                        android:text="▶ PLAY NOW"
-                        android:textSize="@dimen/_16ssp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_16sdp"
-                        android:background="@drawable/background_card"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/hero_subtitle"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- QUICK ACTIONS SECTION -->
-            <TextView
-                android:id="@+id/section_label_quick"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:text="Quick Actions"
-                android:textSize="@dimen/_14ssp"
-                android:textStyle="bold"
-                android:textColor="@color/menu_progress" />
-
-            <!-- ACTION BUTTONS GRID -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/_16sdp"
-                android:spacing="@dimen/_10sdp">
-
-                <com.movtery.zalithlauncher.ui.view.AnimButton
-                    android:id="@+id/btn_mods"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_weight="1"
-                    android:text="Mods"
-                    android:textSize="@dimen/_12ssp"
-                    android:background="@drawable/background_card" />
-
-                <com.movtery.zalithlauncher.ui.view.AnimButton
-                    android:id="@+id/btn_worlds"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_weight="1"
-                    android:text="Worlds"
-                    android:textSize="@dimen/_12ssp"
-                    android:background="@drawable/background_card" />
-
-                <com.movtery.zalithlauncher.ui.view.AnimButton
-                    android:id="@+id/btn_downloads"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_48sdp"
-                    android:layout_weight="1"
-                    android:text="Downloads"
-                    android:textSize="@dimen/_12ssp"
-                    android:background="@drawable/background_card" />
-
-            </LinearLayout>
-
-            <!-- DYNAMIC FRAGMENT CONTAINER -->
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/container_fragment"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_400sdp"
-                android:layout_margin="@dimen/_16sdp" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <!-- PROGRESS/LOADING SECTION -->
-    <View
-        android:id="@+id/progress_divider"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1sdp"
-        android:background="@color/background_menu_element"
-        app:layout_constraintBottom_toTopOf="@+id/progress_layout" />
-
-    <com.kdt.mcgui.ProgressLayout
-        android:id="@+id/progress_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-    <!-- NOTICE DIALOG (HIDDEN BY DEFAULT) -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/notice_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/_12sdp"
-        android:background="@drawable/background_card"
-        android:padding="@dimen/_16sdp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/notice_guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_layout"
-        app:layout_constraintVertical_bias="0.333">
-
-        <TextView
-            android:id="@+id/notice_title_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="@color/menu_bar_text"
-            android:gravity="center_horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginVertical="@dimen/_12sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/notice_title_view"
-            app:layout_constraintBottom_toTopOf="@id/notice_got_button">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/notice_message_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_14sdp"
-                    android:textColor="@color/primary_text"
-                    android:textIsSelectable="true" />
-
-                <TextView
-                    android:id="@+id/notice_date_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:textSize="@dimen/_12sdp"
-                    android:gravity="end"
-                    android:textColor="@color/menu_progress" />
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <com.movtery.zalithlauncher.ui.view.AnimButton
-            android:id="@+id/notice_got_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/generic_ok"
-            android:layout_marginTop="@dimen/_12sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/notice_message_view"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/notice_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <!-- DECORATIVE OVERLAY (HIDDEN BY DEFAULT) -->
-    <ImageView
-        android:id="@+id/hair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_hair" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
