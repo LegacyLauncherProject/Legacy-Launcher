@@ -2,38 +2,43 @@
 <resources>
     <color name="black_or_white">#FFFFFF</color>
 
-    <color name="background_app">#181818</color>
-    <color name="background_app_error">#431A1A</color>
-    <color name="background_overlay">#464646</color>
-    <color name="background_status_bar">#242424</color>
-    <color name="background_menu_top">#232323</color>
-    <color name="background_menu_top_error">#E62E0909</color>
-    <color name="background_menu_element">#1F7281</color>
-    <color name="background_ripple_effect">#DCDCDC</color>
+    <color name="background_app">#0A1929</color>
+    <color name="background_app_error">#3D1515</color>
+    <color name="background_overlay">#132A42</color>
+    <color name="background_status_bar">#050F1A</color>
+    <color name="background_menu_top">#0F2A3F</color>
+    <color name="background_menu_top_error">#4A1A1A</color>
+    <color name="background_menu_element">#1A4F6B</color>
+    <color name="background_ripple_effect">#2A5A7A</color>
 
-    <color name="button_background">#3C3C3C</color>
-    <color name="button_background_selected">#5B5B5B</color>
-    <color name="dialog_background">#232323</color>
+    <color name="button_background">#1A3F52</color>
+    <color name="button_background_selected">#2A5A7A</color>
+    <color name="dialog_background">#0F1F2F</color>
 
-    <color name="menu_bar">#555555</color>
-    <color name="menu_overlay">#BE232323</color>
-    <color name="menu_progress">#888888</color>
+    <color name="menu_bar">#0A1F2F</color>
+    <color name="menu_overlay">#BE0F2A3F</color>
+    <color name="menu_progress">#00D4FF</color>
 
-    <color name="background_item">#BF2E2E2E</color>
-    <color name="background_item_selected">#D8373737</color>
-    <color name="background_item_disabled">#D8452828</color>
-    <color name="background_sponsor_intermediate">#80BD6C2D</color>
-    <color name="background_sponsor_advanced">#80B83C1F</color>
+    <color name="background_item">#BF0F2A3F</color>
+    <color name="background_item_selected">#1A4F6B</color>
+    <color name="background_item_disabled">#2A1515</color>
+    <color name="background_sponsor_intermediate">#801A4A6A</color>
+    <color name="background_sponsor_advanced">#802A5A8A</color>
 
-    <color name="edit_box_fill">#4C4C4C</color>
-    <color name="edit_box_fill_selected">#636363</color>
+    <color name="edit_box_fill">#1A3F52</color>
+    <color name="edit_box_fill_selected">#2A5A7A</color>
 
-    <color name="mod_category_fill">#804C4C4C</color>
-    <color name="text_background_fill">#B3434343</color>
+    <color name="mod_category_fill">#801A3F52</color>
+    <color name="text_background_fill">#B32A4A5A</color>
 
-    <color name="settings_category">#31E2D4</color>
+    <color name="settings_category">#00D4FF</color>
 
-    <color name="icon_color">#FFFFFF</color>
+    <color name="icon_color">#E8F4F9</color>
 
-    <color name="primary_text">#FFFFFF</color>
+    <color name="primary_text">#E8F4F9</color>
+    
+    <!-- CYBERPUNK NEON ACCENTS -->
+    <color name="neon_cyan">#00D4FF</color>
+    <color name="neon_pink">#FF006B</color>
+    <color name="neon_magenta">#FF0099</color>
 </resources>
